@@ -5,7 +5,10 @@ import propstypes from 'prop-types';
 import TextForm from './Component/TextForm';
 import React, {useState} from 'react';
 import About from './Component/About';
+import Test from './Component/Test';
 import { BrowserRouter, Routes, Route,Link } from "react-router-dom";
+import Game from './Component/Game';
+import SnakeGame from './Component/SnackGame';
 
 function App() {
   const [mode, setMode] = useState('light'); // 'light' or 'dark'
@@ -23,7 +26,7 @@ function App() {
     
     <>
      <BrowserRouter>
-    <Nevbar title="Nevbar" home="Home" about="About" mode={mode} togleMode={togleMode}/>
+    <Nevbar title="Nevbar" home="Home" about="About" test="Test" game="Game" snakeGame="SnakeGame" mode={mode} togleMode={togleMode}/>
     <div className="container my-2">
     {/* <TextForm  heading="Please enter your text" mode={mode}/> */}
     </div>
@@ -32,6 +35,9 @@ function App() {
       
       <Route exact path="/" element={<TextForm  heading="Please enter your text"/>}/>
        <Route exact path="/about" element={<About/>}/>
+        <Route exact path="/test" element={<Test/>}/>
+         <Route exact path="/game" element={<Game/>}/>
+         <Route exact path="/snakeGame" element={<SnakeGame/>}/>
     </Routes>
     </BrowserRouter>
     </>

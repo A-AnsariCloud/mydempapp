@@ -20,6 +20,16 @@ export default function Nevbar(props) {
         <li className="nav-item">
          <Link className="nav-link active" aria-current="page" to="/about">{props.about}</Link>
         </li>
+        <li className="nav-item">
+         <Link className="nav-link active" aria-current="page" to="/test">{props.test}</Link>
+        </li>
+        <li className="nav-item">
+         <Link className="nav-link active" aria-current="page" to="/game">{props.game}</Link>
+        </li>
+          <li className="nav-item">
+         <Link className="nav-link active" aria-current="page" to="/snakeGame">{props.snakeGame}</Link>
+        </li>
+        
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
